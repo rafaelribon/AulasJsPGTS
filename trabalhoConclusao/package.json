@@ -1,0 +1,14 @@
+{
+  "name": "programacaoautomacaotestes",
+  "version": "1.0.0",
+  "description": "Trabalho de Conclusão da Matéria de Programacao para Automação de Testes - PGTS",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.test.js"
+  },
+  "author": "Rafael Ribon",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  }
+}
