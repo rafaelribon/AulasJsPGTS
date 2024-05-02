@@ -1,4 +1,5 @@
-function calcularTotal(ferramentas,comprar) {
+
+const calcularTotal = (ferramentas,comprar) => {
 
     const quantidadeDeFerramentas = ferramentas.length;
     
@@ -28,7 +29,7 @@ function calcularTotal(ferramentas,comprar) {
         throw new Error("Nenhuma ferramenta desejada encontrada.");
     }
 
-    return `O valor a pagar pelas ferramentas (${ferramentasCompradas}) é R$ ${total.toFixed(2)}.`;
+    return `O valor a pagar pelas ferramentas (${ferramentasCompradas}) é R$ ${total.toFixed(2)}`;
 }
 
 
