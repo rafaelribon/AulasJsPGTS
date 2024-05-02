@@ -4,22 +4,19 @@ function calcularTotal(ferramentas,comprar) {
     
     const quantidadeCompras = comprar.length;
 
-    if (ferramentas.length === 0 || comprar.length === 0) {
+    if (quantidadeDeFerramentas === 0 || quantidadeCompras === 0) {
         throw new Error("Ambas as listas precisam ter ao menos um item.");
     }
 
     let total = 0;
     let ferramentasCompradas = "";
-    let primeiraFerramenta = true;
 
-    for (let i = 0; i < ferramentas.length; i++) {
-        for (let j = 0; j < comprar.length; j++) {
+    for (let i = 0; i < quantidadeDeFerramentas; i++) {
+        for (let j = 0; j <quantidadeCompras; j++) {
             if (ferramentas[i].nome === comprar[j]) {
                 total += ferramentas[i].preco;
-                if (!primeiraFerramenta) {
+                if (ferramentasCompradas !== "") {
                     ferramentasCompradas += ", ";
-                } else {
-                    primeiraFerramenta = false;
                 }
                 ferramentasCompradas += ferramentas[i].nome;
                 break; // Para a busca nesta ferramenta
@@ -27,11 +24,11 @@ function calcularTotal(ferramentas,comprar) {
         }
     }
 
-    if (ferramentasCompradas.length === 0) {
+    if (ferramentasCompradas === "") {
         throw new Error("Nenhuma ferramenta desejada encontrada.");
     }
 
-    return `O valor a pagar pelas ferramentas (${ferramentasCompradas}) é R$ ${total.toFixed(2)}`;
+    return `O valor a pagar pelas ferramentas (${ferramentasCompradas}) é R$ ${total.toFixed(2)}.`;
 }
 
 
