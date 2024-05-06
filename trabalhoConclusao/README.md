@@ -12,8 +12,6 @@
 
 ## Como Rodar 
 
-Clonar o projeto
-
 ```bash
 # Clonar o repositorio  
 $ git clone https://github.com/rafaelribon/AulasJsPGTS.git
